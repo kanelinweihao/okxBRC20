@@ -1,0 +1,13 @@
+### git忽略目录
+# main
+.idea
+# tmp
+# tmp
+/tmp/bak/*
+!/tmp/bak/.gitkeep
+/tmp/logs/*
+!/tmp/logs/.gitkeep
+/tmp/downloads/*
+!/tmp/downloads/.gitkeep
+/tmp/uploads/*
+!/tmp/uploads/.gitkeep

@@ -1,0 +1,36 @@
+###编辑器配置文件
+
+### 这是根文件,不用继续往上查找了
+root = true
+
+### 匹配全部文件
+[*]
+# 字符集用UTF-8
+charset = utf-8
+# 结尾换行符用linux的LF
+end_of_line = lf
+# 文件结尾插入新行
+insert_final_newline = true
+# 缩进使用空格
+indent_style = space
+# 缩进空格数为4
+indent_size = 4
+# 删除行最前最后的空格
+trim_trailing_whitespace = true
+
+### 匹配以.md结尾的文件
+[*.md]
+# 不删除行最前最后的空格
+trim_trailing_whitespace = false
+
+### 匹配以.yml或.ymal结尾的文件
+[*.{yml,yaml}]
+# 缩进空格数为2
+indent_size = 2
+
+### 匹配以.go结尾的文件
+[*.go]
+# 缩进使用TAB
+indent_style = tab
+# TAB宽度为4
+tab_width = 4
