@@ -2,15 +2,15 @@ package controller
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/kanelinweihao/OKXBRC20/app/utils/err"
-	"github.com/kanelinweihao/OKXBRC20/app/utils/pack"
-	"github.com/kanelinweihao/OKXBRC20/app/utils/result"
+	"github.com/kanelinweihao/okxBRC20/app/utils/err"
+	"github.com/kanelinweihao/okxBRC20/app/utils/pack"
+	"github.com/kanelinweihao/okxBRC20/app/utils/result"
 	"io/fs"
 	"net/http"
 )
 
 func Home(c *gin.Context) {
-	projectName := "OKX_BRC20"
+	projectName := "okxBRC20"
 	c.String(http.StatusOK, projectName)
 	return
 }

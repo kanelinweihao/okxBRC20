@@ -3,8 +3,8 @@ package main
 import (
 	"embed"
 	"fmt"
-	"github.com/kanelinweihao/OKXBRC20/app/boot"
-	"github.com/kanelinweihao/OKXBRC20/app/utils/pack"
+	"github.com/kanelinweihao/okxBRC20/app/boot"
+	"github.com/kanelinweihao/okxBRC20/app/utils/pack"
 )
 
 //go:embed resource/*

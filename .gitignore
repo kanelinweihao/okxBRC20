@@ -2,7 +2,6 @@
 # main
 .idea
 # tmp
-# tmp
 /tmp/bak/*
 !/tmp/bak/.gitkeep
 /tmp/logs/*
@@ -11,3 +10,6 @@
 !/tmp/downloads/.gitkeep
 /tmp/uploads/*
 !/tmp/uploads/.gitkeep
+# ext
+*.exe
+*.linux

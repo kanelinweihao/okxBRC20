@@ -3,10 +3,10 @@ package boot
 import (
 	"fmt"
 	"github.com/gin-gonic/gin"
-	"github.com/kanelinweihao/OKXBRC20/app/middleware"
-	"github.com/kanelinweihao/OKXBRC20/app/router"
-	"github.com/kanelinweihao/OKXBRC20/app/utils/err"
-	"github.com/kanelinweihao/OKXBRC20/app/utils/times"
+	"github.com/kanelinweihao/okxBRC20/app/middleware"
+	"github.com/kanelinweihao/okxBRC20/app/router"
+	"github.com/kanelinweihao/okxBRC20/app/utils/err"
+	"github.com/kanelinweihao/okxBRC20/app/utils/times"
 	"io"
 	"os"
 	"strings"
@@ -28,7 +28,7 @@ func ready() {
 }
 
 func getFileOfGinLog() (f io.Writer) {
-	projectName := "OKXBRC20"
+	projectName := "okxBRC20"
 	projectNameLower := strings.ToLower(projectName)
 	pathLog := fmt.Sprintf(
 		"./tmp/logs/log_gin_%s.log",

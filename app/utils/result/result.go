@@ -15,3 +15,11 @@ func GetResultSuccess(data interface{}) (result *Result) {
 	result.Data = data
 	return result
 }
+
+func GetResultFail(err error) (result *Result) {
+	result = new(Result)
+	result.Code = http.StatusBadRequest
+	result.Msg = "Fail"
+	result.Data = err.Error()
+	return result
+}

@@ -2,8 +2,8 @@ package pack
 
 import (
 	"embed"
-	"github.com/kanelinweihao/OKXBRC20/app/utils/err"
-	"github.com/kanelinweihao/OKXBRC20/app/utils/file"
+	"github.com/kanelinweihao/okxBRC20/app/utils/err"
+	"github.com/kanelinweihao/okxBRC20/app/utils/file"
 	"strings"
 )
 

@@ -3,26 +3,24 @@ package controller
 import (
 	"fmt"
 	"github.com/gin-gonic/gin"
-	"github.com/kanelinweihao/OKXBRC20/app/utils/result"
-	"net/http"
+	"github.com/kanelinweihao/BRC20-goSDK/coins/brc20"
+	"github.com/kanelinweihao/okxBRC20/app/service"
 )
 
-func success(c *gin.Context, data interface{}) {
-	resultSuccess := result.GetResultSuccess(data)
-	c.JSON(http.StatusOK, resultSuccess)
-	return
-}
-
 func Inscribe(c *gin.Context) {
-	name := c.DefaultQuery("name", "Mr.Jin")
-	data := fmt.Sprintf("hello %s", name)
-	success(c, data)
+	entityRequestInscribe := new(brc20.InscriptionRequest)
+	errBindJson := c.ShouldBindJSON(entityRequestInscribe)
+	if errBindJson != nil {
+		fail(c, errBindJson)
+	}
+	jsonFromOKX := service.Inscribe(entityRequestInscribe)
+	back(c, jsonFromOKX)
 	return
 }
 
 func Transaction(c *gin.Context) {
-	name := c.Query("name")
-	data := fmt.Sprintf("hello %s\n", name)
+	name := c.DefaultQuery("name", "Mr.Jin")
+	data := fmt.Sprintf("hello %s", name)
 	success(c, data)
 	return
 }

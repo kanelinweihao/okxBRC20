@@ -1,7 +1,7 @@
 package file
 
 import (
-	"github.com/kanelinweihao/OKXBRC20/app/utils/err"
+	"github.com/kanelinweihao/okxBRC20/app/utils/err"
 	"io/fs"
 	"io/ioutil"
 	"os"
