@@ -1,4 +1,4 @@
-package controller
+package controllerBase
 
 import (
 	"fmt"
@@ -7,20 +7,20 @@ import (
 	"net/http"
 )
 
-func back(c *gin.Context, data interface{}) {
+func Back(c *gin.Context, data interface{}) {
 	c.JSON(http.StatusOK, data)
 	fmt.Println()
 	return
 }
 
-func success(c *gin.Context, data interface{}) {
+func Success(c *gin.Context, data interface{}) {
 	resultSuccess := result.GetResultSuccess(data)
 	c.JSON(http.StatusOK, resultSuccess)
 	fmt.Println()
 	return
 }
 
-func fail(c *gin.Context, err error) {
+func Fail(c *gin.Context, err error) {
 	resultFail := result.GetResultFail(err)
 	c.JSON(http.StatusBadRequest, resultFail)
 	fmt.Println()

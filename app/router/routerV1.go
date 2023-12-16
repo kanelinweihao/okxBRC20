@@ -2,7 +2,7 @@ package router
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/kanelinweihao/okxBRC20/app/controller"
+	"github.com/kanelinweihao/okxBRC20/app/controller/v1/controllerV1"
 )
 
 func setRouterV1(r *gin.Engine) {
@@ -10,9 +10,9 @@ func setRouterV1(r *gin.Engine) {
 	{
 		v1.POST(
 			"/inscribe",
-			controller.Inscribe)
+			controllerV1.Inscribe)
 		v1.POST(
 			"/transaction",
-			controller.Transaction)
+			controllerV1.Transaction)
 	}
 }
